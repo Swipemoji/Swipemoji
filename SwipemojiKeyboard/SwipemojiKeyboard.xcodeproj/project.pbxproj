@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1608981A1E8346550061AAE7 /* PointDisplayCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160898191E8346550061AAE7 /* PointDisplayCanvas.swift */; };
+		160898361E840ADD0061AAE7 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160898351E840ADD0061AAE7 /* InstructionViewController.swift */; };
 		169AFE3C1E5D4B26005FF5C3 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169AFE3B1E5D4B26005FF5C3 /* PreviewViewController.swift */; };
 		16EA02991E4B775E00B23EAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA02981E4B775E00B23EAC /* AppDelegate.swift */; };
 		16EA029E1E4B775F00B23EAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EA029C1E4B775F00B23EAC /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 		16EA02B11E4B786800B23EAC /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA02B01E4B786800B23EAC /* KeyboardViewController.swift */; };
 		16EA02B51E4B786800B23EAC /* Swipemoji.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 16EA02AE1E4B786800B23EAC /* Swipemoji.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		16EA02BB1E4B79F100B23EAC /* Swipemoji.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16EA02BA1E4B79F100B23EAC /* Swipemoji.xib */; };
+		16ED04151E81C890003C899E /* CustomDictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED04141E81C890003C899E /* CustomDictionaryViewController.swift */; };
+		16ED04171E81CBE5003C899E /* DictionaryEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED04161E81CBE5003C899E /* DictionaryEntryTableViewCell.swift */; };
 		16FEFC211E537A7C00C05418 /* MatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FEFC1E1E537A7C00C05418 /* MatchResult.swift */; };
 		16FEFC221E537A7C00C05418 /* MatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FEFC1E1E537A7C00C05418 /* MatchResult.swift */; };
 		16FEFC231E537A7C00C05418 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FEFC1F1E537A7C00C05418 /* Point.swift */; };
@@ -55,6 +59,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		160898191E8346550061AAE7 /* PointDisplayCanvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointDisplayCanvas.swift; path = SwipemojiKeyboard/PointDisplayCanvas.swift; sourceTree = "<group>"; };
+		160898351E840ADD0061AAE7 /* InstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
 		169AFE3B1E5D4B26005FF5C3 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		16EA02951E4B775E00B23EAC /* SwipemojiKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipemojiKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16EA02981E4B775E00B23EAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +72,8 @@
 		16EA02B01E4B786800B23EAC /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		16EA02B21E4B786800B23EAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16EA02BA1E4B79F100B23EAC /* Swipemoji.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Swipemoji.xib; sourceTree = "<group>"; };
+		16ED04141E81C890003C899E /* CustomDictionaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDictionaryViewController.swift; sourceTree = "<group>"; };
+		16ED04161E81CBE5003C899E /* DictionaryEntryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryEntryTableViewCell.swift; sourceTree = "<group>"; };
 		16FEFC1E1E537A7C00C05418 /* MatchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchResult.swift; sourceTree = "<group>"; };
 		16FEFC1F1E537A7C00C05418 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		16FEFC201E537A7C00C05418 /* PointCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointCloud.swift; sourceTree = "<group>"; };
@@ -126,6 +134,9 @@
 				16EA02A11E4B775F00B23EAC /* LaunchScreen.storyboard */,
 				16EA02A41E4B775F00B23EAC /* Info.plist */,
 				1FC858C51E57730000C9141B /* GestureMatchController.swift */,
+				16ED04141E81C890003C899E /* CustomDictionaryViewController.swift */,
+				16ED04161E81CBE5003C899E /* DictionaryEntryTableViewCell.swift */,
+				160898351E840ADD0061AAE7 /* InstructionViewController.swift */,
 			);
 			path = SwipemojiKeyboard;
 			sourceTree = "<group>";
@@ -157,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				16FEFC291E537AB900C05418 /* PointCloudModeler.swift */,
+				160898191E8346550061AAE7 /* PointDisplayCanvas.swift */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -280,9 +292,13 @@
 				16FEFC251E537A7C00C05418 /* PointCloud.swift in Sources */,
 				16FEFC2D1E537B4800C05418 /* PointCloudLibrary.swift in Sources */,
 				16FEFC2A1E537AB900C05418 /* PointCloudModeler.swift in Sources */,
+				1608981A1E8346550061AAE7 /* PointDisplayCanvas.swift in Sources */,
 				169AFE3C1E5D4B26005FF5C3 /* PreviewViewController.swift in Sources */,
 				16FEFC231E537A7C00C05418 /* Point.swift in Sources */,
+				160898361E840ADD0061AAE7 /* InstructionViewController.swift in Sources */,
+				16ED04151E81C890003C899E /* CustomDictionaryViewController.swift in Sources */,
 				16FEFC301E537B5E00C05418 /* PointDrawingCanvas.swift in Sources */,
+				16ED04171E81CBE5003C899E /* DictionaryEntryTableViewCell.swift in Sources */,
 				16FEFC211E537A7C00C05418 /* MatchResult.swift in Sources */,
 				16EA02991E4B775E00B23EAC /* AppDelegate.swift in Sources */,
 				1FC858C61E57730000C9141B /* GestureMatchController.swift in Sources */,

@@ -62,6 +62,8 @@ class PointDrawingCanvas : UIView {
     // Quartz 2D
     func drawLine(_ from:CGPoint, to:CGPoint) {
         // Creates a bitmap-based graphics context and makes it the current context.
+        print(from)
+        print(to)
         UIGraphicsBeginImageContext(self.frame.size)
         let context = UIGraphicsGetCurrentContext()
         tempImageView!.image?.draw(in: CGRect(x:0, y:0, width:self.frame.size.width, height:self.frame.size.height))
