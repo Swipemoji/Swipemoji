@@ -2,7 +2,7 @@ import UIKit
 
 class PointCloudModeler {
     let origin = Point(x:0.0, y:0.0, id:0)
-    let numPoints = 32
+    let numPoints = 64
     
     // var keyword in function parameter makes it to be mutable.
     // resampling given points
