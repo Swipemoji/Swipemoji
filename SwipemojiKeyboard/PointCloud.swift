@@ -3,6 +3,29 @@ import UIKit
 class PointCloud {
     var name:String = ""
     var _points:[Point] = [Point]()
+    //*/
+    
+    func toJSON() -> String {
+        var json = "{"
+        
+        json += "\"" + name + "\": ["
+        for point in _points {
+            json += "{"
+            
+            json += "\"x\":" + "\(point.x)" + ","
+            json += "\"y\":" + "\(point.y)" + ","
+            json += "\"id\":" + "\(point.id)"
+            json += "},"
+        }
+        
+        
+        json += "]}"
+        
+        
+       return json
+    } 
+     //*/
+    
     
     init(_ name:String, _ points:[Point]) {
         let modeler = PointCloudModeler()
@@ -73,4 +96,5 @@ class PointCloud {
         
         return sum
     }
+    
 }

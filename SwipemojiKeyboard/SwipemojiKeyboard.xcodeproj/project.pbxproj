@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AFA66A59684F985DA8FC787 /* Pods_SwipemojiKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD9727B258AFC1686344D4 /* Pods_SwipemojiKeyboard.framework */; };
 		1608981A1E8346550061AAE7 /* PointDisplayCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160898191E8346550061AAE7 /* PointDisplayCanvas.swift */; };
 		160898361E840ADD0061AAE7 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160898351E840ADD0061AAE7 /* InstructionViewController.swift */; };
 		169AFE3C1E5D4B26005FF5C3 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169AFE3B1E5D4B26005FF5C3 /* PreviewViewController.swift */; };
@@ -31,7 +32,11 @@
 		16FEFC2E1E537B4800C05418 /* PointCloudLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FEFC2C1E537B4800C05418 /* PointCloudLibrary.swift */; };
 		16FEFC301E537B5E00C05418 /* PointDrawingCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FEFC2F1E537B5E00C05418 /* PointDrawingCanvas.swift */; };
 		16FEFC311E537B5E00C05418 /* PointDrawingCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FEFC2F1E537B5E00C05418 /* PointDrawingCanvas.swift */; };
+		1F0105BE1E81D07B00E2CDC3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F0105BD1E81D07B00E2CDC3 /* GoogleService-Info.plist */; };
+		1F0105BF1E81D07B00E2CDC3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F0105BD1E81D07B00E2CDC3 /* GoogleService-Info.plist */; };
 		1FC858C61E57730000C9141B /* GestureMatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC858C51E57730000C9141B /* GestureMatchController.swift */; };
+		1FDBACFD1E82CE7C00344A0F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FDBACFC1E82CE7C00344A0F /* GoogleService-Info.plist */; };
+		D55BF8CB2D3DADF6E7705BCF /* Pods_Swipemoji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67655D20BD65EBBB9A82B7CD /* Pods_Swipemoji.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0DC30583105B524812AE06E8 /* Pods-Swipemoji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swipemoji.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swipemoji/Pods-Swipemoji.release.xcconfig"; sourceTree = "<group>"; };
 		160898191E8346550061AAE7 /* PointDisplayCanvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointDisplayCanvas.swift; path = SwipemojiKeyboard/PointDisplayCanvas.swift; sourceTree = "<group>"; };
 		160898351E840ADD0061AAE7 /* InstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
 		169AFE3B1E5D4B26005FF5C3 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
@@ -80,9 +86,16 @@
 		16FEFC291E537AB900C05418 /* PointCloudModeler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointCloudModeler.swift; path = ../PointCloudModeler.swift; sourceTree = "<group>"; };
 		16FEFC2C1E537B4800C05418 /* PointCloudLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointCloudLibrary.swift; path = ../../PointCloudLibrary.swift; sourceTree = "<group>"; };
 		16FEFC2F1E537B5E00C05418 /* PointDrawingCanvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointDrawingCanvas.swift; path = ../../PointDrawingCanvas.swift; sourceTree = "<group>"; };
+		1F0105BD1E81D07B00E2CDC3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1FC858C51E57730000C9141B /* GestureMatchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureMatchController.swift; sourceTree = "<group>"; };
 		1FC858C71E5CFDEB00C9141B /* SwipemojiKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwipemojiKeyboard.entitlements; sourceTree = "<group>"; };
 		1FC858C81E5CFF3900C9141B /* Swipemoji.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swipemoji.entitlements; sourceTree = "<group>"; };
+		1FDBACFC1E82CE7C00344A0F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		67655D20BD65EBBB9A82B7CD /* Pods_Swipemoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swipemoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B73D8BAA056C195FF0D81F34 /* Pods-SwipemojiKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipemojiKeyboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwipemojiKeyboard/Pods-SwipemojiKeyboard.release.xcconfig"; sourceTree = "<group>"; };
+		B7FD9727B258AFC1686344D4 /* Pods_SwipemojiKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipemojiKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDD301204E5C54FDA8EDAA4C /* Pods-SwipemojiKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipemojiKeyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwipemojiKeyboard/Pods-SwipemojiKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
+		EFBACADE9A648E68035C10EE /* Pods-Swipemoji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swipemoji.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swipemoji/Pods-Swipemoji.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AFA66A59684F985DA8FC787 /* Pods_SwipemojiKeyboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D55BF8CB2D3DADF6E7705BCF /* Pods_Swipemoji.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +126,8 @@
 				16EA02971E4B775E00B23EAC /* SwipemojiKeyboard */,
 				16EA02AF1E4B786800B23EAC /* Swipemoji */,
 				16EA02961E4B775E00B23EAC /* Products */,
+				A78952E48A16299196E59D75 /* Pods */,
+				2B03CC6F13C001AB22150E15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +143,7 @@
 		16EA02971E4B775E00B23EAC /* SwipemojiKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				1F0105BD1E81D07B00E2CDC3 /* GoogleService-Info.plist */,
 				1FC858C71E5CFDEB00C9141B /* SwipemojiKeyboard.entitlements */,
 				16EA02981E4B775E00B23EAC /* AppDelegate.swift */,
 				169AFE3B1E5D4B26005FF5C3 /* PreviewViewController.swift */,
@@ -144,6 +162,7 @@
 		16EA02AF1E4B786800B23EAC /* Swipemoji */ = {
 			isa = PBXGroup;
 			children = (
+				1FDBACFC1E82CE7C00344A0F /* GoogleService-Info.plist */,
 				1FC858C81E5CFF3900C9141B /* Swipemoji.entitlements */,
 				16FEFC2C1E537B4800C05418 /* PointCloudLibrary.swift */,
 				16FEFC2F1E537B5E00C05418 /* PointDrawingCanvas.swift */,
@@ -173,6 +192,26 @@
 			name = util;
 			sourceTree = "<group>";
 		};
+		2B03CC6F13C001AB22150E15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67655D20BD65EBBB9A82B7CD /* Pods_Swipemoji.framework */,
+				B7FD9727B258AFC1686344D4 /* Pods_SwipemojiKeyboard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A78952E48A16299196E59D75 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFBACADE9A648E68035C10EE /* Pods-Swipemoji.debug.xcconfig */,
+				0DC30583105B524812AE06E8 /* Pods-Swipemoji.release.xcconfig */,
+				BDD301204E5C54FDA8EDAA4C /* Pods-SwipemojiKeyboard.debug.xcconfig */,
+				B73D8BAA056C195FF0D81F34 /* Pods-SwipemojiKeyboard.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,10 +219,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16EA02A71E4B775F00B23EAC /* Build configuration list for PBXNativeTarget "SwipemojiKeyboard" */;
 			buildPhases = (
+				98731878AA5CC2922BA8F048 /* [CP] Check Pods Manifest.lock */,
 				16EA02911E4B775E00B23EAC /* Sources */,
 				16EA02921E4B775E00B23EAC /* Frameworks */,
 				16EA02931E4B775E00B23EAC /* Resources */,
 				16EA02B91E4B786800B23EAC /* Embed App Extensions */,
+				B94CEFF71AA1DA861E39C6D1 /* [CP] Embed Pods Frameworks */,
+				12964033FA5B5C3B3AE6D4E5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,9 +241,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16EA02B61E4B786800B23EAC /* Build configuration list for PBXNativeTarget "Swipemoji" */;
 			buildPhases = (
+				A1AC4199F79576854B247199 /* [CP] Check Pods Manifest.lock */,
 				16EA02AA1E4B786800B23EAC /* Sources */,
 				16EA02AB1E4B786800B23EAC /* Frameworks */,
 				16EA02AC1E4B786800B23EAC /* Resources */,
+				00F0310ED083AFDF186776BA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,7 +268,7 @@
 				TargetAttributes = {
 					16EA02941E4B775E00B23EAC = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 4XRLFC3F88;
+						DevelopmentTeam = 5HR7QQ25H6;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -269,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16EA02A31E4B775F00B23EAC /* LaunchScreen.storyboard in Resources */,
+				1F0105BE1E81D07B00E2CDC3 /* GoogleService-Info.plist in Resources */,
 				16EA02A01E4B775F00B23EAC /* Assets.xcassets in Resources */,
 				16EA029E1E4B775F00B23EAC /* Main.storyboard in Resources */,
 			);
@@ -279,10 +324,90 @@
 			buildActionMask = 2147483647;
 			files = (
 				16EA02BB1E4B79F100B23EAC /* Swipemoji.xib in Resources */,
+				1F0105BF1E81D07B00E2CDC3 /* GoogleService-Info.plist in Resources */,
+				1FDBACFD1E82CE7C00344A0F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00F0310ED083AFDF186776BA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swipemoji/Pods-Swipemoji-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		12964033FA5B5C3B3AE6D4E5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwipemojiKeyboard/Pods-SwipemojiKeyboard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98731878AA5CC2922BA8F048 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A1AC4199F79576854B247199 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B94CEFF71AA1DA861E39C6D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwipemojiKeyboard/Pods-SwipemojiKeyboard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		16EA02911E4B775E00B23EAC /* Sources */ = {
@@ -444,12 +569,13 @@
 		};
 		16EA02A81E4B775F00B23EAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDD301204E5C54FDA8EDAA4C /* Pods-SwipemojiKeyboard.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SwipemojiKeyboard/SwipemojiKeyboard.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4XRLFC3F88;
+				DEVELOPMENT_TEAM = 5HR7QQ25H6;
 				INFOPLIST_FILE = SwipemojiKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -464,12 +590,13 @@
 		};
 		16EA02A91E4B775F00B23EAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B73D8BAA056C195FF0D81F34 /* Pods-SwipemojiKeyboard.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SwipemojiKeyboard/SwipemojiKeyboard.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4XRLFC3F88;
+				DEVELOPMENT_TEAM = 5HR7QQ25H6;
 				INFOPLIST_FILE = SwipemojiKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -482,6 +609,7 @@
 		};
 		16EA02B71E4B786800B23EAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFBACADE9A648E68035C10EE /* Pods-Swipemoji.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Swipemoji/Swipemoji.entitlements;
 				CODE_SIGN_IDENTITY = "";
@@ -502,6 +630,7 @@
 		};
 		16EA02B81E4B786800B23EAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DC30583105B524812AE06E8 /* Pods-Swipemoji.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Swipemoji/Swipemoji.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
