@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KeyboardViewController: UIInputViewController {
+class KeyboardViewController: UIInputViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet var nextKeyboardButton: UIButton!
     @IBOutlet var keyboardView: UIView!
@@ -25,6 +25,7 @@ class KeyboardViewController: UIInputViewController {
     var newCharacter : Bool = true
     var lastInput : String = ""
     
+    @IBOutlet weak var suggestionCollectionView: UICollectionView!
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
@@ -39,6 +40,7 @@ class KeyboardViewController: UIInputViewController {
 
 //        initializeGestureLibrary()
         loadInterface();
+        
  
         self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
         
@@ -56,6 +58,24 @@ class KeyboardViewController: UIInputViewController {
         // Perform custom UI setup here
         
         keyboardView.backgroundColor = UIColor(red:0.82, green:0.84, blue:0.86, alpha:1.0)
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    
+    // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = suggestionCollectionView.dequeueReusableCell(withReuseIdentifier: "suggestionCell", for: indexPath)
+        cell.backgroundColor = UIColor.red
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // handle tap events
+        print("You selected cell #\(indexPath.item)!")
     }
     
     func strokeEnded() {

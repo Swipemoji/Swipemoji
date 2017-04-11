@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0AFA66A59684F985DA8FC787 /* Pods_SwipemojiKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD9727B258AFC1686344D4 /* Pods_SwipemojiKeyboard.framework */; };
+		16026EF61E95D61E0078B7FC /* SuggestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16026EF51E95D61E0078B7FC /* SuggestionCollectionViewCell.swift */; };
 		1608981A1E8346550061AAE7 /* PointDisplayCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160898191E8346550061AAE7 /* PointDisplayCanvas.swift */; };
 		160898361E840ADD0061AAE7 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160898351E840ADD0061AAE7 /* InstructionViewController.swift */; };
 		169AFE3C1E5D4B26005FF5C3 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169AFE3B1E5D4B26005FF5C3 /* PreviewViewController.swift */; };
@@ -65,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		0DC30583105B524812AE06E8 /* Pods-Swipemoji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swipemoji.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swipemoji/Pods-Swipemoji.release.xcconfig"; sourceTree = "<group>"; };
+		16026EF51E95D61E0078B7FC /* SuggestionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionCollectionViewCell.swift; sourceTree = "<group>"; };
 		160898191E8346550061AAE7 /* PointDisplayCanvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointDisplayCanvas.swift; path = SwipemojiKeyboard/PointDisplayCanvas.swift; sourceTree = "<group>"; };
 		160898351E840ADD0061AAE7 /* InstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
 		169AFE3B1E5D4B26005FF5C3 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		16EA028C1E4B775E00B23EAC = {
 			isa = PBXGroup;
 			children = (
+				16026EF51E95D61E0078B7FC /* SuggestionCollectionViewCell.swift */,
 				16FEFC281E537A9E00C05418 /* util */,
 				16FEFC271E537A8E00C05418 /* model */,
 				16EA02971E4B775E00B23EAC /* SwipemojiKeyboard */,
@@ -268,7 +271,7 @@
 				TargetAttributes = {
 					16EA02941E4B775E00B23EAC = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 5HR7QQ25H6;
+						DevelopmentTeam = 4XRLFC3F88;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -422,6 +425,7 @@
 				16FEFC231E537A7C00C05418 /* Point.swift in Sources */,
 				160898361E840ADD0061AAE7 /* InstructionViewController.swift in Sources */,
 				16ED04151E81C890003C899E /* CustomDictionaryViewController.swift in Sources */,
+				16026EF61E95D61E0078B7FC /* SuggestionCollectionViewCell.swift in Sources */,
 				16FEFC301E537B5E00C05418 /* PointDrawingCanvas.swift in Sources */,
 				16ED04171E81CBE5003C899E /* DictionaryEntryTableViewCell.swift in Sources */,
 				16FEFC211E537A7C00C05418 /* MatchResult.swift in Sources */,
@@ -575,7 +579,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SwipemojiKeyboard/SwipemojiKeyboard.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5HR7QQ25H6;
+				DEVELOPMENT_TEAM = 4XRLFC3F88;
 				INFOPLIST_FILE = SwipemojiKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -596,7 +600,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SwipemojiKeyboard/SwipemojiKeyboard.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5HR7QQ25H6;
+				DEVELOPMENT_TEAM = 4XRLFC3F88;
 				INFOPLIST_FILE = SwipemojiKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
