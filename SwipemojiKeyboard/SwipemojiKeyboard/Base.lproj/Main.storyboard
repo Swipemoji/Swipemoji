@@ -335,7 +335,6 @@
                                 </state>
                                 <connections>
                                     <action selector="closePressed:" destination="NhA-0O-R44" eventType="touchUpInside" id="Lnq-sv-yNO"/>
-                                    <action selector="submitGesture:" destination="NhA-0O-R44" eventType="touchUpInside" id="zCY-zL-emZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdw-5g-nbB">
