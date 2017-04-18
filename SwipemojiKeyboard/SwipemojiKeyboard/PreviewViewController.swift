@@ -34,7 +34,8 @@ class PreviewViewController: UIViewController, UICollectionViewDataSource, UICol
         self.popEmojiView.layer.cornerRadius = 62.5
         self.popEmojiView.layer.borderColor = UIColor(red:0.92, green:0.92, blue:0.92, alpha:1.0).cgColor
          self.popEmojiView.layer.borderWidth = 2
-        self.popUpView.layer.cornerRadius = 25
+        self.popUpView.layer.cornerRadius = 18
+        collectionView.showsVerticalScrollIndicator = false
         
     }
     
