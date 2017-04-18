@@ -115,7 +115,8 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate, U
         cell.label.text = suggestions?[indexPath.item]
         var border = CALayer()
         border.backgroundColor = UIColor.lightGray.cgColor;
-        border.frame = CGRect(x: 0, y: 0, width: 1, height: cell.frame.height - 10)
+        border.opacity = 0.5
+        border.frame = CGRect(x: 0, y: 0, width: 0.7, height: cell.frame.height - 10)
         cell.layer.addSublayer(border)
         return cell
     }

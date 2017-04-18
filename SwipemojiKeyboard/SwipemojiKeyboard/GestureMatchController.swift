@@ -41,10 +41,6 @@ class GestureMatchController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func clearPressed(_ sender: Any) {
-        drawingCanvas?.clearCanvas()
-    }
     
     @IBAction func closePressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -55,7 +51,11 @@ class GestureMatchController: UIViewController {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
-        
+    
+    @IBAction func clearPressed(_ sender: Any) {
+        drawingCanvas?.clearCanvas()
+    }
+    
     @IBAction func submitGesture(_ sender: Any) {
         if let canvas = drawingCanvas {
             if !canvas.isEmpty() {
