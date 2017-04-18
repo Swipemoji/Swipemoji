@@ -136,8 +136,9 @@ class PointCloudLibrary {
         if let dicArray = defaults!.array(forKey: "gestures") as? [NSMutableDictionary] {
             var dicArrayStore = dicArray
             dicArrayStore = dicArrayStore.filter({ (dic) -> Bool in
-                dic.allKeys[0] as! String != input
+                dic.allKeys[0] as! String != input && dic.allKeys[1] as! String != input
             })
+            //TODO: Make it so it does not reset
             dicArrayStore.append([input : pointsToArray(points: inputPoints), "count": 0])
             defaults!.set(dicArrayStore, forKey: "gestures")
             
