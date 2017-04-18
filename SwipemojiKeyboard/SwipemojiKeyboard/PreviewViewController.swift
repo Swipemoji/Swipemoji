@@ -28,17 +28,31 @@ class PreviewViewController: UIViewController, UICollectionViewDataSource, UICol
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         self.popBlackBack.alpha = 0
         self.popUpView.center.y = 1000
-        
         self.popEmojiView.layer.cornerRadius = 62.5
         self.popEmojiView.layer.borderColor = UIColor(red:0.92, green:0.92, blue:0.92, alpha:1.0).cgColor
-         self.popEmojiView.layer.borderWidth = 2
+        self.popEmojiView.layer.borderWidth = 2
         self.popUpView.layer.cornerRadius = 18
-        collectionView.showsVerticalScrollIndicator = false
-        
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if !PreviewViewController.isSwipemojiKBInstalled() {
+            self.performSegue(withIdentifier: "setupSegue", sender: nil)
+        }
+    }
+    
+    static func isSwipemojiKBInstalled() -> Bool{
+        let defaults = UserDefaults.standard
+        let keyboards = defaults.object(forKey: "AppleKeyboards") as! NSArray
+        let index = keyboards.index(of: "com.swipemoji.swipemoji.Swipemoji")
+        if(index != NSNotFound) {
+            print("Found keyboard")
+            return true
+        }
+        return false
+    }
     
     
     override func viewWillAppear(_ animated: Bool) {
