@@ -1,4 +1,6 @@
 import UIKit
+import CoreData
+
 
 
 class PointCloudLibrary {
@@ -132,6 +134,10 @@ class PointCloudLibrary {
     }
     
     static func submitGesture(input: String, inputPoints: [Point]){
+        
+        
+        
+        // NSUserDefaults
         let defaults = UserDefaults.init(suiteName: "group.swipemoji.appgroup")
         if let dicArray = defaults!.array(forKey: "gestures") as? [NSMutableDictionary] {
             var dicArrayStore = dicArray

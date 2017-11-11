@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A8CE7981FA663CE0027C101 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A8CE7961FA663CE0027C101 /* Model.xcdatamodeld */; };
 		16068D091F97E21F00F2FAF3 /* EmojiPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16068D081F97E21F00F2FAF3 /* EmojiPickerViewController.swift */; };
 		16068D0B1F98E7F200F2FAF3 /* EmojiList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16068D0A1F98E7F200F2FAF3 /* EmojiList.plist */; };
 		16068D0E1F98F7B200F2FAF3 /* EmojiPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16068D0D1F98F7B200F2FAF3 /* EmojiPickerView.swift */; };
@@ -68,6 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A8CE7971FA663CE0027C101 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		16068D081F97E21F00F2FAF3 /* EmojiPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiPickerViewController.swift; sourceTree = "<group>"; };
 		16068D0A1F98E7F200F2FAF3 /* EmojiList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EmojiList.plist; sourceTree = "<group>"; };
 		16068D0D1F98F7B200F2FAF3 /* EmojiPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmojiPickerView.swift; path = View/EmojiPickerView.swift; sourceTree = SOURCE_ROOT; };
@@ -144,6 +146,7 @@
 		16EA028C1E4B775E00B23EAC = {
 			isa = PBXGroup;
 			children = (
+				0A8CE7961FA663CE0027C101 /* Model.xcdatamodeld */,
 				16FEFC281E537A9E00C05418 /* util */,
 				16FEFC271E537A8E00C05418 /* model */,
 				16068D0C1F98F6DE00F2FAF3 /* view */,
@@ -338,6 +341,7 @@
 				16FEFC2D1E537B4800C05418 /* PointCloudLibrary.swift in Sources */,
 				16FEFC2A1E537AB900C05418 /* PointCloudModeler.swift in Sources */,
 				16A38C921EA018550010E658 /* DemoViewController.swift in Sources */,
+				0A8CE7981FA663CE0027C101 /* Model.xcdatamodeld in Sources */,
 				1699357D1E9F0DA200542B5D /* emojiCollectionViewCell.swift in Sources */,
 				169DB02B1FA0DFE900DA2354 /* PointDrawingCanvas.swift in Sources */,
 				1608981A1E8346550061AAE7 /* PointDisplayCanvas.swift in Sources */,
@@ -598,6 +602,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0A8CE7961FA663CE0027C101 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0A8CE7971FA663CE0027C101 /* Model.xcdatamodel */,
+			);
+			currentVersion = 0A8CE7971FA663CE0027C101 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 16EA028D1E4B775E00B23EAC /* Project object */;
 }
