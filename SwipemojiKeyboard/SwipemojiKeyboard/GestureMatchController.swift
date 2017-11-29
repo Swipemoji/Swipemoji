@@ -42,13 +42,17 @@ class GestureMatchController: UIViewController {
         
         var closeButtonText : String?
         var closeButtonFont : UIFont?
+        var closeButtonImage : UIImage?
         if(self.isModal)!{
             closeButtonText = "✕"
+            closeButtonImage = UIImage(named: "close")
             closeButtonFont = UIFont.systemFont(ofSize: 30)
         } else {
             closeButtonText = "＜"
+            closeButtonImage = UIImage(named: "back")
             closeButtonFont = UIFont(name: "Avenir Next Heavy", size: 18)
         }
+        closeButton.setImage(closeButtonImage, for: .normal)
         print(closeButtonText!)
         closeButton.setTitle(closeButtonText, for: .normal)
         closeButton.titleLabel?.font = closeButtonFont

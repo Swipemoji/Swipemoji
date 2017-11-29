@@ -15,7 +15,6 @@
         <array key="AvenirNext.ttc">
             <string>AvenirNext-Bold</string>
             <string>AvenirNext-DemiBold</string>
-            <string>AvenirNext-Heavy</string>
         </array>
     </customFonts>
     <scenes>
@@ -156,11 +155,10 @@
                                         <rect key="frame" x="8" y="8" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EK2-bo-vdy">
-                                                <rect key="frame" x="5" y="7" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EK2-bo-vdy">
+                                                <rect key="frame" x="5" y="5" width="30" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                <state key="normal" title="✎">
+                                                <state key="normal" image="edit">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
@@ -170,14 +168,6 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.39811766147613525" green="0.68757778406143188" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ics-7X-mKd">
-                                        <rect key="frame" x="240" y="8" width="45" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Delete"/>
-                                        <connections>
-                                            <action selector="deletePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="duL-xp-7vS"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exo-Do-0Hx">
                                         <rect key="frame" x="148" y="175" width="110" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -203,6 +193,21 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M7K-2p-Ii6">
+                                        <rect key="frame" x="251" y="8" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ics-7X-mKd">
+                                                <rect key="frame" x="5" y="5" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="delete"/>
+                                                <connections>
+                                                    <action selector="deletePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="duL-xp-7vS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.3981176615" green="0.68757778410000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -215,6 +220,7 @@
                         <outlet property="collectionView" destination="OO8-mV-tjd" id="5CX-aH-FiS"/>
                         <outlet property="popBlackBack" destination="3J7-OO-yCu" id="z8x-6r-jBi"/>
                         <outlet property="popCountLabel" destination="exo-Do-0Hx" id="N3P-Ue-6Q1"/>
+                        <outlet property="popDeleteButton" destination="M7K-2p-Ii6" id="Pw3-Dw-1Hy"/>
                         <outlet property="popEditButton" destination="Vh0-Op-kHE" id="4en-e8-Gjs"/>
                         <outlet property="popEmojiLabel" destination="bXH-6u-3aV" id="yTm-A9-TbT"/>
                         <outlet property="popGestureView" destination="KHG-XM-ceA" id="hxb-o3-LUC"/>
@@ -319,12 +325,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.92230062260000001" green="0.95854666749999995" blue="0.99189911909999995" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3q-OT-zCv">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3q-OT-zCv">
                                 <rect key="frame" x="15" y="42" width="42" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.27910992503166199" blue="0.40911883115768433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="18"/>
-                                <state key="normal" title="＜">
+                                <state key="normal" image="back">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -407,12 +412,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Aj-S4-HPf">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Aj-S4-HPf">
                                 <rect key="frame" x="15" y="42" width="42" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.27910992503166199" blue="0.40911883115768433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="✕">
+                                <state key="normal" image="close">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -439,4 +443,10 @@
             <point key="canvasLocation" x="698" y="1146"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back" width="64" height="64"/>
+        <image name="close" width="64" height="64"/>
+        <image name="delete" width="64" height="64"/>
+        <image name="edit" width="64" height="64"/>
+    </resources>
 </document>

@@ -24,6 +24,7 @@ class PreviewViewController: UIViewController, UICollectionViewDataSource, UICol
     @IBOutlet weak var popCountLabel: UILabel!
     
     @IBOutlet weak var popEditButton: UIView!
+    @IBOutlet weak var popDeleteButton: UIView!
     @IBOutlet weak var viewOptionSegmentedControl: UISegmentedControl!
     @IBOutlet weak var addButton: UIButton!
     
@@ -40,6 +41,9 @@ class PreviewViewController: UIViewController, UICollectionViewDataSource, UICol
         self.popUpView.dropShadow(color: UIColor.black, offSet: 4)
         self.popEditButton.layer.cornerRadius = 20
         self.popEditButton.dropShadow(color: UIColor(red:0.41, green:0.69, blue:1.00, alpha:1.0), offSet: 2)
+        self.popDeleteButton.layer.cornerRadius = 20
+        self.popDeleteButton.dropShadow(color: UIColor(red:1.00, green:0.29, blue:0.42, alpha:1.0), offSet: 2)
+        self.popDeleteButton.backgroundColor = UIColor(red:1.00, green:0.29, blue:0.42, alpha:1.0)
         
         self.addButton.layer.cornerRadius = 30
         self.addButton.dropShadow(color: UIColor(red:0.41, green:0.69, blue:1.00, alpha:1.0), offSet: 4)

@@ -32,6 +32,7 @@
                     <rect key="frame" x="0.0" y="233" width="55" height="47"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <state key="normal" title="ABC">
                         <color key="titleColor" red="0.64313725489999995" green="0.66666666669999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -57,7 +58,7 @@
                     <rect key="frame" x="321" y="233" width="55" height="47"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <state key="normal" image="back">
+                    <state key="normal" image="backspace">
                         <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
@@ -81,6 +82,6 @@
         </button>
     </objects>
     <resources>
-        <image name="back" width="23" height="17"/>
+        <image name="backspace" width="23" height="17"/>
     </resources>
 </document>
