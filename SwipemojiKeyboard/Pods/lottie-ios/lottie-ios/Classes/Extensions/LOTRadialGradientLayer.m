@@ -29,8 +29,12 @@
 }
 
 - (id)actionForKey:(NSString *)key {
-  if (self.actions[key]) {
-    return self.actions[key];
+  id action = self.actions[key];
+  if (action) {
+    if (action == [NSNull null]) {
+      return nil;
+    }
+    return action;
   }
   
   if ([key isEqualToString:@"startPoint"] ||
@@ -47,12 +51,12 @@
 
 - (void)drawInContext:(CGContextRef)ctx {
   NSInteger numberOfLocations = self.locations.count;
-  NSInteger numbOfComponents = 0;
+  NSInteger numberOfComponents = 0;
   CGColorSpaceRef colorSpace = NULL;
   
   if (self.colors.count) {
     CGColorRef colorRef = (__bridge CGColorRef)[self.colors objectAtIndex:0];
-    numbOfComponents = CGColorGetNumberOfComponents(colorRef);
+    numberOfComponents = CGColorGetNumberOfComponents(colorRef);
     colorSpace = CGColorGetColorSpace(colorRef);
   }
   
@@ -60,15 +64,15 @@
   CGFloat radius = LOT_PointDistanceFromPoint(self.startPoint, self.endPoint);
   
   CGFloat gradientLocations[numberOfLocations];
-  CGFloat gradientComponents[numberOfLocations * numbOfComponents];
+  CGFloat gradientComponents[numberOfLocations * numberOfComponents];
   
   for (NSInteger locationIndex = 0; locationIndex < numberOfLocations; locationIndex++) {
     
     gradientLocations[locationIndex] = [self.locations[locationIndex] floatValue];
     const CGFloat *colorComponents = CGColorGetComponents((__bridge CGColorRef)self.colors[locationIndex]);
     
-    for (NSInteger componentIndex = 0; componentIndex < numbOfComponents; componentIndex++) {
-      gradientComponents[numbOfComponents * locationIndex + componentIndex] = colorComponents[componentIndex];
+    for (NSInteger componentIndex = 0; componentIndex < numberOfComponents; componentIndex++) {
+      gradientComponents[numberOfComponents * locationIndex + componentIndex] = colorComponents[componentIndex];
     }
   }
   

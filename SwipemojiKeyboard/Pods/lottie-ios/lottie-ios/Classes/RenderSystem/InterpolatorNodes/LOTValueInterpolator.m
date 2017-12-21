@@ -15,8 +15,7 @@
 
 @end
 
-@implementation LOTValueInterpolator {
-}
+@implementation LOTValueInterpolator
 
 - (instancetype)initWithKeyframes:(NSArray <LOTKeyframe *> *)keyframes {
   self = [super init];
@@ -31,6 +30,7 @@
   return nil;
 }
 
+// Change keyframe data
 - (BOOL)setValue:(id)value atFrame:(NSNumber *)frame {
   id data = [self keyframeDataForValue:value];
   if (data == nil) {

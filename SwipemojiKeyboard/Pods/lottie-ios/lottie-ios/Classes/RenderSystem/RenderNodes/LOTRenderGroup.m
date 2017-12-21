@@ -28,12 +28,12 @@
   LOTAnimatorNode *_rootNode;
   LOTBezierPath *_outputPath;
   LOTBezierPath *_localPath;
-  
+  BOOL _rootNodeHasUpdate;
   LOTNumberInterpolator *_opacityInterpolator;
   LOTTransformInterpolator *_transformInterolator;
 }
 
-- (instancetype _Nonnull )initWithInputNode:(LOTAnimatorNode * _Nullable)inputNode
+- (instancetype _Nonnull)initWithInputNode:(LOTAnimatorNode * _Nullable)inputNode
                                    contents:(NSArray * _Nonnull)contents
                                     keyname:(NSString * _Nullable)keyname {
   self = [super initWithInputNode:inputNode keyName:keyname];
@@ -81,7 +81,7 @@
       previousNode = rectAnimator;
     } else if ([item isKindOfClass:[LOTShapeCircle class]]) {
       LOTCircleAnimator *circleAnimator = [[LOTCircleAnimator alloc] initWithInputNode:previousNode
-                                                                           shapeCircle:(LOTShapeCircle*)item];
+                                                                           shapeCircle:(LOTShapeCircle *)item];
       previousNode = circleAnimator;
     } else if ([item isKindOfClass:[LOTShapeGroup class]]) {
       LOTShapeGroup *shapeGroup = (LOTShapeGroup *)item;
@@ -91,7 +91,7 @@
     } else if ([item isKindOfClass:[LOTShapeTransform class]]) {
       transform = (LOTShapeTransform *)item;
     } else if ([item isKindOfClass:[LOTShapeTrimPath class]]) {
-      LOTTrimPathNode *trim = [[LOTTrimPathNode alloc] initWithInputNode:previousNode trimPath:(LOTShapeTrimPath*)item];
+      LOTTrimPathNode *trim = [[LOTTrimPathNode alloc] initWithInputNode:previousNode trimPath:(LOTShapeTrimPath *)item];
       previousNode = trim;
     } else if ([item isKindOfClass:[LOTShapeStar class]]) {
       LOTShapeStar *star = (LOTShapeStar *)item;
@@ -126,13 +126,13 @@
 - (BOOL)needsUpdateForFrame:(NSNumber *)frame {
   return ([_opacityInterpolator hasUpdateForFrame:frame] ||
           [_transformInterolator hasUpdateForFrame:frame] ||
-          [_rootNode needsUpdateForFrame:frame]);
+          _rootNodeHasUpdate);
 
 }
 
 - (BOOL)updateWithFrame:(NSNumber *)frame withModifierBlock:(void (^ _Nullable)(LOTAnimatorNode * _Nonnull))modifier forceLocalUpdate:(BOOL)forceUpdate {
   indentation_level = indentation_level + 1;
-  [_rootNode updateWithFrame:frame withModifierBlock:modifier forceLocalUpdate:forceUpdate];
+  _rootNodeHasUpdate = [_rootNode updateWithFrame:frame withModifierBlock:modifier forceLocalUpdate:forceUpdate];
   indentation_level = indentation_level - 1;
   BOOL update = [super updateWithFrame:frame withModifierBlock:modifier forceLocalUpdate:forceUpdate];
   return update;
@@ -163,7 +163,7 @@
   }
 }
 
--(void)setPathShouldCacheLengths:(BOOL)pathShouldCacheLengths {
+- (void)setPathShouldCacheLengths:(BOOL)pathShouldCacheLengths {
   [super setPathShouldCacheLengths:pathShouldCacheLengths];
   _rootNode.pathShouldCacheLengths = pathShouldCacheLengths;
 }

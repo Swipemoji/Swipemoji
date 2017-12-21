@@ -15,7 +15,7 @@
 #import "LOTMaskContainer.h"
 #import "LOTAsset.h"
 
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+#if TARGET_OS_IPHONE || TARGET_OS_SIMULATOR
 #import "LOTCacheProvider.h"
 #endif
 
@@ -105,7 +105,7 @@
   interpolators[@"Transform.Opacity"] = _opacityInterpolator;
   interpolators[@"Transform.Anchor Point"] = _transformInterpolator.anchorInterpolator;
   interpolators[@"Transform.Scale"] = _transformInterpolator.scaleInterpolator;
-  interpolators[@"Transform.Rotation"] = _transformInterpolator.scaleInterpolator;
+  interpolators[@"Transform.Rotation"] = _transformInterpolator.rotationInterpolator;
   if (_transformInterpolator.positionXInterpolator &&
       _transformInterpolator.positionYInterpolator) {
     interpolators[@"Transform.X Position"] = _transformInterpolator.positionXInterpolator;
@@ -121,7 +121,7 @@
   [_wrapperLayer addSublayer:_contentsGroup.containerLayer];
 }
 
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+#if TARGET_OS_IPHONE || TARGET_OS_SIMULATOR
 
 - (void)_setImageForAsset:(LOTAsset *)asset {
   if (asset.imageName) {
@@ -143,7 +143,7 @@
       } else {
         image = [UIImage imageWithContentsOfFile:imagePath];
       }
-    }else{
+    } else {
       NSArray *components = [asset.imageName componentsSeparatedByString:@"."];
       image = [UIImage imageNamed:components.firstObject inBundle:asset.assetBundle compatibleWithTraitCollection:nil];
     }
@@ -167,7 +167,7 @@
       CGFloat desiredScaleFactor = [window backingScaleFactor];
       CGFloat actualScaleFactor = [image recommendedLayerContentsScale:desiredScaleFactor];
       id layerContents = [image layerContentsForContentsScale:actualScaleFactor];
-      _wrapperLayer = layerContents;
+      _wrapperLayer.contents = layerContents;
     }
   }
   
@@ -178,31 +178,42 @@
 // MARK - Animation
 
 + (BOOL)needsDisplayForKey:(NSString *)key {
-  BOOL needsDisplay = [super needsDisplayForKey:key];
-  
   if ([key isEqualToString:@"currentFrame"]) {
-    needsDisplay = YES;
+    return YES;
   }
-  
-  return needsDisplay;
+  return [super needsDisplayForKey:key];
 }
 
--(id<CAAction>)actionForKey:(NSString *)event {
-  if([event isEqualToString:@"currentFrame"]) {
+- (id<CAAction>)actionForKey:(NSString *)event {
+  if ([event isEqualToString:@"currentFrame"]) {
     CABasicAnimation *theAnimation = [CABasicAnimation
                                       animationWithKeyPath:event];
+    theAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     theAnimation.fromValue = [[self presentationLayer] valueForKey:event];
     return theAnimation;
   }
   return [super actionForKey:event];
 }
 
-- (void)display {
-  LOTLayerContainer *presentation = (LOTLayerContainer *)self.presentationLayer;
-  if (presentation == nil) {
-    presentation = self;
+- (id)initWithLayer:(id)layer {
+  if (self = [super initWithLayer:layer]) {
+    if ([layer isKindOfClass:[LOTLayerContainer class]]) {
+      LOTLayerContainer *other = (LOTLayerContainer *)layer;
+      self.currentFrame = [other.currentFrame copy];
+    }
   }
-  [self displayWithFrame:presentation.currentFrame];
+  return self;
+}
+
+- (void)display {
+  @synchronized(self) {
+    LOTLayerContainer *presentation = self;
+    if (self.animationKeys.count &&
+      self.presentationLayer) {
+        presentation = (LOTLayerContainer *)self.presentationLayer;
+    }
+    [self displayWithFrame:presentation.currentFrame];
+  }
 }
 
 - (void)displayWithFrame:(NSNumber *)frame {
@@ -247,6 +258,33 @@
     } else {
       return [_contentsGroup setValue:value forKeyAtPath:keypath forFrame:frame];
     }
+  } else {
+    NSArray *transFormComponents = [keypath componentsSeparatedByString:@".Transform."];
+    if (transFormComponents.count == 2) {
+      // Is a layer level transform. Check if it applies to a parent transform.
+      NSString *layerName = transFormComponents.firstObject;
+      NSString *attribute = transFormComponents.lastObject;
+      LOTTransformInterpolator *parentTransform = _transformInterpolator.inputNode;
+      while (parentTransform) {
+        if ([parentTransform.parentKeyName isEqualToString:layerName]) {
+          if ([attribute isEqualToString:@"Anchor Point"]) {
+            [parentTransform.anchorInterpolator setValue:value atFrame:frame];
+          } else if ([attribute isEqualToString:@"Scale"]) {
+            [parentTransform.scaleInterpolator setValue:value atFrame:frame];
+          } else if ([attribute isEqualToString:@"Rotation"]) {
+            [parentTransform.rotationInterpolator setValue:value atFrame:frame];
+          } else if ([attribute isEqualToString:@"X Position"]) {
+            [parentTransform.positionXInterpolator setValue:value atFrame:frame];
+          } else if ([attribute isEqualToString:@"Y Position"]) {
+            [parentTransform.positionYInterpolator setValue:value atFrame:frame];
+          } else if ([attribute isEqualToString:@"Position"]) {
+            [parentTransform.positionInterpolator setValue:value atFrame:frame];
+          }
+          parentTransform = nil;
+        }
+        parentTransform = parentTransform.inputNode;
+      }
+    }
   }
   return NO;
 }
@@ -261,8 +299,7 @@
 }
 
 - (void)logHierarchyKeypathsWithParent:(NSString * _Nullable)parent {
-  [_contentsGroup logHierarchyKeypathsWithParent:parent
-   ];
+  [_contentsGroup logHierarchyKeypathsWithParent:parent];
 }
 
 @end
