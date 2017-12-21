@@ -1,5 +1,5 @@
 import UIKit
-
+import CoreData
 
 class PointCloudLibrary {
     // empty point cloud array.
@@ -133,6 +133,36 @@ class PointCloudLibrary {
     
     static func submitGesture(input: String, inputPoints: [Point]){
         let defaults = UserDefaults.init(suiteName: "group.swipemoji.appgroup")
+        let emoji = Emoji(context: CoreDataService.context)
+        emoji.setValue(Int16(42), forKey: "count")
+        CoreDataService.saveContext()
+        
+        let fetchRequest: NSFetchRequest<Emoji> = Emoji.fetchRequest();
+        do {
+            let emojis = try CoreDataService.context.fetch(fetchRequest)
+            
+        } catch {
+            
+        }
+//        if let dicArray = defaults!.array(forKey: "emojis") as? [NSMutableDictionary] {
+//            var dicArrayStore = dicArray
+//            //TODO: Create a more elegant filtering system
+//            dicArrayStore = dicArrayStore.filter({ (dic) -> Bool in
+//                dic.allKeys[0] as! String != input &&  dic.allKeys[1] as! String != input
+//
+//            })
+//            for temp in dicArrayStore {
+//                print(temp.allKeys)
+//            }
+//            dicArrayStore.append([input : pointsToArray(points: inputPoints), "count": 0])
+//            defaults!.set(dicArrayStore, forKey: "gestures")
+//
+//        } else {
+//            var dicArray: [NSMutableDictionary] = []
+//            dicArray.append([input : pointsToArray(points: inputPoints), "count": 0])
+//            defaults!.set(dicArray, forKey: "gestures")
+//        }
+        
         if let dicArray = defaults!.array(forKey: "gestures") as? [NSMutableDictionary] {
             var dicArrayStore = dicArray
             //TODO: Create a more elegant filtering system

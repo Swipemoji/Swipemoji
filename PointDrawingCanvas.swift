@@ -15,6 +15,7 @@ class PointDrawingCanvas : UIView {
     var tempImageView:UIImageView?
     var emptyOverlayView: EmptyDrawOverlayView?
     
+    
     override init(frame:CGRect) {
         super.init(frame: frame)
         tempImageView = UIImageView(frame:frame)
@@ -22,6 +23,8 @@ class PointDrawingCanvas : UIView {
         tempImageView!.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1)
         self.addSubview(tempImageView!)
         createEmptyStateOverlay()
+        
+        
     }
 
     required init?(coder aDecoder: NSCoder) {

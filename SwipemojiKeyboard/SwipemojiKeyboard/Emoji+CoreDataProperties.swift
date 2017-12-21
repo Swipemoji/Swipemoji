@@ -2,7 +2,7 @@
 //  Emoji+CoreDataProperties.swift
 //  SwipemojiKeyboard
 //
-//  Created by Shakeeb Majid on 12/20/17.
+//  Created by Shakeeb Majid on 12/21/17.
 //  Copyright © 2017 swipemoji. All rights reserved.
 //
 //

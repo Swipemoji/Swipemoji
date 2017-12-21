@@ -44,12 +44,12 @@
 		16FEFC311E537B5E00C05418 /* PointDrawingCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FEFC2F1E537B5E00C05418 /* PointDrawingCanvas.swift */; };
 		1F5660E41FEB6AE90039B8A6 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF86EF21FEB595F00D235D4 /* CoreDataService.swift */; };
 		1F5660ED1FEB6F890039B8A6 /* EmojiModels.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F5660EB1FEB6F890039B8A6 /* EmojiModels.xcdatamodeld */; };
-		1F5660F01FEB6FBB0039B8A6 /* Emoji+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5660EE1FEB6FBB0039B8A6 /* Emoji+CoreDataClass.swift */; };
-		1F5660F11FEB6FBB0039B8A6 /* Emoji+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5660EF1FEB6FBB0039B8A6 /* Emoji+CoreDataProperties.swift */; };
-		1F5660F21FEB6FCB0039B8A6 /* Emoji+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5660EE1FEB6FBB0039B8A6 /* Emoji+CoreDataClass.swift */; };
-		1F5660F31FEB6FCE0039B8A6 /* Emoji+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5660EF1FEB6FBB0039B8A6 /* Emoji+CoreDataProperties.swift */; };
+		1F5660FC1FEB78720039B8A6 /* EmojiModels.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F5660EB1FEB6F890039B8A6 /* EmojiModels.xcdatamodeld */; };
+		1F5660FF1FEB78970039B8A6 /* Emoji+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5660FD1FEB78970039B8A6 /* Emoji+CoreDataClass.swift */; };
+		1F5661001FEB78970039B8A6 /* Emoji+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5660FE1FEB78970039B8A6 /* Emoji+CoreDataProperties.swift */; };
+		1F5661011FEB78A60039B8A6 /* Emoji+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5660FD1FEB78970039B8A6 /* Emoji+CoreDataClass.swift */; };
+		1F5661021FEB78AA0039B8A6 /* Emoji+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5660FE1FEB78970039B8A6 /* Emoji+CoreDataProperties.swift */; };
 		1FC858C61E57730000C9141B /* GestureMatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC858C51E57730000C9141B /* GestureMatchController.swift */; };
-		1FF86ED01FEADAD100D235D4 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF86ECF1FEADAD100D235D4 /* Emoji.swift */; };
 		1FF86EF31FEB595F00D235D4 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF86EF21FEB595F00D235D4 /* CoreDataService.swift */; };
 		8A47E54E77852FBBBC577BDC /* Pods_SwipemojiKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01ED658AC0E7137136346771 /* Pods_SwipemojiKeyboard.framework */; };
 		D4359A2A5F4571B4C5133781 /* Pods_Swipemoji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC64A6EF51C2FBC3D93333E /* Pods_Swipemoji.framework */; };
@@ -111,12 +111,11 @@
 		16FEFC2C1E537B4800C05418 /* PointCloudLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointCloudLibrary.swift; path = ../../PointCloudLibrary.swift; sourceTree = "<group>"; };
 		16FEFC2F1E537B5E00C05418 /* PointDrawingCanvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointDrawingCanvas.swift; path = ../../PointDrawingCanvas.swift; sourceTree = "<group>"; };
 		1F5660EC1FEB6F890039B8A6 /* EmojiModels.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmojiModels.xcdatamodel; sourceTree = "<group>"; };
-		1F5660EE1FEB6FBB0039B8A6 /* Emoji+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Emoji+CoreDataClass.swift"; sourceTree = "<group>"; };
-		1F5660EF1FEB6FBB0039B8A6 /* Emoji+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Emoji+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1F5660FD1FEB78970039B8A6 /* Emoji+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Emoji+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1F5660FE1FEB78970039B8A6 /* Emoji+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Emoji+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1FC858C51E57730000C9141B /* GestureMatchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureMatchController.swift; sourceTree = "<group>"; };
 		1FC858C71E5CFDEB00C9141B /* SwipemojiKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwipemojiKeyboard.entitlements; sourceTree = "<group>"; };
 		1FC858C81E5CFF3900C9141B /* Swipemoji.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swipemoji.entitlements; sourceTree = "<group>"; };
-		1FF86ECF1FEADAD100D235D4 /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		1FF86EF21FEB595F00D235D4 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		3AC64A6EF51C2FBC3D93333E /* Pods_Swipemoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swipemoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89FACA755EC19B16A97C3BC1 /* Pods-SwipemojiKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipemojiKeyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwipemojiKeyboard/Pods-SwipemojiKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
@@ -205,8 +204,8 @@
 				1699357C1E9F0DA200542B5D /* emojiCollectionViewCell.swift */,
 				16A38C911EA018550010E658 /* DemoViewController.swift */,
 				1FF86EF21FEB595F00D235D4 /* CoreDataService.swift */,
-				1F5660EE1FEB6FBB0039B8A6 /* Emoji+CoreDataClass.swift */,
-				1F5660EF1FEB6FBB0039B8A6 /* Emoji+CoreDataProperties.swift */,
+				1F5660FD1FEB78970039B8A6 /* Emoji+CoreDataClass.swift */,
+				1F5660FE1FEB78970039B8A6 /* Emoji+CoreDataProperties.swift */,
 			);
 			path = SwipemojiKeyboard;
 			sourceTree = "<group>";
@@ -234,7 +233,6 @@
 				16FEFC1E1E537A7C00C05418 /* MatchResult.swift */,
 				16FEFC1F1E537A7C00C05418 /* Point.swift */,
 				16FEFC201E537A7C00C05418 /* PointCloud.swift */,
-				1FF86ECF1FEADAD100D235D4 /* Emoji.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -476,7 +474,7 @@
 				16FEFC251E537A7C00C05418 /* PointCloud.swift in Sources */,
 				16FEFC2D1E537B4800C05418 /* PointCloudLibrary.swift in Sources */,
 				16FEFC2A1E537AB900C05418 /* PointCloudModeler.swift in Sources */,
-				1F5660F11FEB6FBB0039B8A6 /* Emoji+CoreDataProperties.swift in Sources */,
+				1F5661001FEB78970039B8A6 /* Emoji+CoreDataProperties.swift in Sources */,
 				16A38C921EA018550010E658 /* DemoViewController.swift in Sources */,
 				1699357D1E9F0DA200542B5D /* emojiCollectionViewCell.swift in Sources */,
 				169DB02B1FA0DFE900DA2354 /* PointDrawingCanvas.swift in Sources */,
@@ -484,10 +482,9 @@
 				1F5660ED1FEB6F890039B8A6 /* EmojiModels.xcdatamodeld in Sources */,
 				169AFE3C1E5D4B26005FF5C3 /* PreviewViewController.swift in Sources */,
 				16068D0E1F98F7B200F2FAF3 /* EmojiPickerView.swift in Sources */,
-				1F5660F01FEB6FBB0039B8A6 /* Emoji+CoreDataClass.swift in Sources */,
+				1F5660FF1FEB78970039B8A6 /* Emoji+CoreDataClass.swift in Sources */,
 				16068D101F991E3F00F2FAF3 /* EmojiPickerCollectionViewCell.swift in Sources */,
 				16FEFC231E537A7C00C05418 /* Point.swift in Sources */,
-				1FF86ED01FEADAD100D235D4 /* Emoji.swift in Sources */,
 				1FF86EF31FEB595F00D235D4 /* CoreDataService.swift in Sources */,
 				16FEFC211E537A7C00C05418 /* MatchResult.swift in Sources */,
 				16068D091F97E21F00F2FAF3 /* EmojiPickerViewController.swift in Sources */,
@@ -501,18 +498,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F5660F31FEB6FCE0039B8A6 /* Emoji+CoreDataProperties.swift in Sources */,
-				1F5660F21FEB6FCB0039B8A6 /* Emoji+CoreDataClass.swift in Sources */,
 				169DB02A1FA0DEC600DA2354 /* EmptyDrawOverlayView.swift in Sources */,
 				16FEFC261E537A7C00C05418 /* PointCloud.swift in Sources */,
 				1F5660E41FEB6AE90039B8A6 /* CoreDataService.swift in Sources */,
 				16FEFC2B1E537AB900C05418 /* PointCloudModeler.swift in Sources */,
+				1F5661021FEB78AA0039B8A6 /* Emoji+CoreDataProperties.swift in Sources */,
 				16FEFC2E1E537B4800C05418 /* PointCloudLibrary.swift in Sources */,
 				16FEFC311E537B5E00C05418 /* PointDrawingCanvas.swift in Sources */,
 				160A4A5B1EA2C47F00A44031 /* SuggestionCollectionViewCell.swift in Sources */,
 				16FEFC221E537A7C00C05418 /* MatchResult.swift in Sources */,
+				1F5661011FEB78A60039B8A6 /* Emoji+CoreDataClass.swift in Sources */,
 				16EA02B11E4B786800B23EAC /* KeyboardViewController.swift in Sources */,
 				16FEFC241E537A7C00C05418 /* Point.swift in Sources */,
+				1F5660FC1FEB78720039B8A6 /* EmojiModels.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
