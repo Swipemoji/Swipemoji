@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import Lottie
+import Lottie
 
 class EmptyDrawOverlayView: UIView {
 
@@ -18,13 +18,13 @@ class EmptyDrawOverlayView: UIView {
         // Drawing code
     }
     */
-    //var animationView : LOTAnimationView?
+    var animationView : LOTAnimationView?
     var overlayLabel : UILabel?
     var overlayList : [String] = ["swipe away!"]
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        /*animationView = LOTAnimationView(name: "LogoBWAnimation.json")
+        animationView = LOTAnimationView(name: "LogoBWAnimation.json")
         animationView?.frame = CGRect(x: 0, y: 0, width: 200, height: 112.75)
         animationView?.center = self.center
         self.overlayLabel = UILabel(frame: .zero)
@@ -39,7 +39,7 @@ class EmptyDrawOverlayView: UIView {
         animationView?.frame.origin.y -= (overlayLabel?.frame.height)! / 2
         self.addSubview(animationView!)
         self.addSubview(overlayLabel!)
-        animateOverlay() */
+        animateOverlay()
     }
     
     func animateOverlay(){
@@ -49,7 +49,7 @@ class EmptyDrawOverlayView: UIView {
             self.alpha = 0.5
             self.overlayLabel?.alpha = 1
         }) { (finished) in
-           // self.animationView?.play()
+           self.animationView?.play()
         }
     }
     
